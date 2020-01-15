@@ -422,3 +422,41 @@ mdbt50qrx.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
 mdbt50qrx.menu.debug.l3=Level 3 (Segger SystemView)
 mdbt50qrx.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
 
+# ----------------------------------
+# Beflex BME-300 EvKit
+# ----------------------------------
+bme300evkit.name=Beflex BME-300 EvKit
+bme300evkit.bootloader.tool=bootburn
+
+# Upload
+bme300evkit.upload.tool=nrfutil
+bme300evkit.upload.protocol=nrfutil
+bme300evkit.upload.use_1200bps_touch=false
+bme300evkit.upload.wait_for_upload_port=false
+bme300evkit.upload.maximum_size=106496
+bme300evkit.upload.maximum_data_size=51072
+
+# Build
+bme300evkit.build.mcu=cortex-m4
+bme300evkit.build.f_cpu=64000000
+bme300evkit.build.board=NRF52832_BME300_EVKIT
+bme300evkit.build.core=nRF5
+bme300evkit.build.variant=bme300_evkit
+bme300evkit.build.extra_flags=-DNRF52832_XXAA -DNRF52 -DCONFIG_NFCT_PINS_AS_GPIOS
+bme300evkit.build.ldscript=nrf52832_s132_v6.ld
+
+# SofDevice Menu
+bme300evkit.menu.softdevice.s132v6=0.3.0 SoftDevice s132 6.1.1
+bme300evkit.menu.softdevice.s132v6.build.sd_name=s132
+bme300evkit.menu.softdevice.s132v6.build.sd_version=6.1.1
+bme300evkit.menu.softdevice.s132v6.build.sd_fwid=0x00B7
+
+# Debug Menu
+bme300evkit.menu.debug.l0=Level 0 (Release)
+bme300evkit.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+bme300evkit.menu.debug.l1=Level 1 (Error Message)
+bme300evkit.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+bme300evkit.menu.debug.l2=Level 2 (Full Debug)
+bme300evkit.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+bme300evkit.menu.debug.l3=Level 3 (Segger SystemView)
+bme300evkit.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
